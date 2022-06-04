@@ -2,8 +2,6 @@ package main
 
 import (
 	"bufio"
-	"flag"
-	"fmt"
 	"io"
 	"log"
 	"math/rand"
@@ -107,22 +105,22 @@ func isSentenceEnd(word string) bool {
 	return w == '.' || w == '?' || w == '!'
 }
 
-func main() {
-	input := flag.String("in", "../data/lyrics/alllyrics.txt", "input file")
-	n := flag.Int("n", 1, "number of words to use as prefix")
-	runs := flag.Int("runs", 20, "number of runs to generate")
-	wordsPerRun := flag.Int("words", 20, "number of words per run")
-	startOnCapital := flag.Bool("capital", false, "start output with a capitalized prefix")
-	flag.Parse()
-
-	c, err := NewChainFromFile(*input, *n)
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	for i := 0; i < *runs; i++ {
-		out := c.GenSentence(*wordsPerRun, *startOnCapital)
-		fmt.Println(out)
-	}
-}
+// func main() {
+// 	input := flag.String("in", "../data/lyrics/alllyrics.txt", "input file")
+// 	n := flag.Int("n", 1, "number of words to use as prefix")
+// 	runs := flag.Int("runs", 20, "number of runs to generate")
+// 	wordsPerRun := flag.Int("words", 20, "number of words per run")
+// 	startOnCapital := flag.Bool("capital", false, "start output with a capitalized prefix")
+// 	flag.Parse()
+//
+// 	c, err := NewChainFromFile(*input, *n)
+//
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
+//
+// 	for i := 0; i < *runs; i++ {
+// 		out := c.GenSentence(*wordsPerRun, *startOnCapital)
+// 		fmt.Println(out)
+// 	}
+// }

@@ -9,6 +9,6 @@ in Golang, and the frontend will be in SolidJS.
 ## To-Dos:
 - [x] Get Lyric Data
 - [x] Create Markov Chain
-- [ ] Build API
+- [x] Build API
 - [ ] Construct Frontend
 
