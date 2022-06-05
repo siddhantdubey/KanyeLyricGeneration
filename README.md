@@ -10,5 +10,15 @@ in Golang, and the frontend will be in SolidJS.
 - [x] Get Lyric Data
 - [x] Create Markov Chain
 - [x] Build API
-- [ ] Construct Frontend
+- [x] Construct Frontend
 
+## Instructions on Running Locally
+
+### Backend 
+- cd into the backend directory
+- run `go run markov.go main.go`
+
+### Frontend 
+- cd into the frontend directory
+- install dependencies
+- run `npm run dev`
